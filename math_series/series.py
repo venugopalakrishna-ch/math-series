@@ -48,8 +48,21 @@ def lucas_iterative(n):
         elif n == 0:
             return n
 
-    
-
+def sum_series(n,default1="",default2=""):
+    if n == 0:
+        return n
+    elif default1 != "" and default2 != "":
+        if n == 1:  
+            return 2
+        elif n == 2 :
+            return 1
+        else:
+            return sum_series(n-1,2,1) + sum_series(n-2,2,1)
+    elif n== 1:
+         return n  
+    else:
+        return sum_series(n-1) + sum_series(n-2)   
+  
 
 
 

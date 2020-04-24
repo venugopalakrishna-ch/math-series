@@ -3,6 +3,7 @@ from math_series.series import fibonacci
 from math_series.series import fibonacci_iteration
 from math_series.series import lucas_recursive
 from math_series.series import lucas_iterative
+from math_series.series import sum_series
 
 def test_version():
     assert __version__ == '0.1.0'
@@ -125,3 +126,45 @@ def test_lucas_iterative_five():
 
 def test_lucas_iterative_six():
     assert lucas_iterative(6) == 11
+
+def test_sum_series_fib_zero():
+    assert sum_series(0) == 0
+
+def test_sum_series_fib_one():
+    assert sum_series(1) == 1
+
+def test_sum_series_fib_two():
+    assert sum_series(2) == 1
+
+def test_sum_series_fib_three():
+    assert sum_series(3) == 2
+
+def test_sum_series_fib_four():
+    assert sum_series(4) == 3
+
+def test_sum_series_fib_five():
+    assert sum_series(5) == 5
+
+def test_sum_series_fib_six():
+    assert sum_series(6) == 8
+
+def test_sum_series_lucas_zero():
+    assert sum_series(0,2,1) == 0
+
+def test_sum_series_lucas_one():
+    assert sum_series(1,2,1) == 2
+
+def test_sum_series_lucas_two():
+    assert sum_series(2,2,1) == 1
+
+def test_sum_series_lucas_three():
+    assert sum_series(3,2,1) == 3
+
+def test_sum_series_lucas_four():
+    assert sum_series(4,2,1) == 4
+
+def test_sum_series_lucas_five():
+    assert sum_series(5,2,1) == 7
+
+def test_sum_series_lucas_six():
+    assert sum_series(6,2,1) == 11
